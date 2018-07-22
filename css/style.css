@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+}
+
+/* Starting with the NavBar*/
+.navbar{
+    margin-top: 2%;
+    border-bottom: 2px solid #17dd42;
+}
+.navbar img{
+    margin-left: 4%;
+    width: 5%;
+}
+.navbar ul{
+    margin-right: 4%;
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 0;
+    margin: 0;
+}
+.navbar li{
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar a{
+    text-decoration: none;
+    color: #17dd42;
+    display: block;
+}
+.navbar a:hover{
+    color: #fff;
+}
+.navbar a.active{
+    color: #fff;
+    /*cursor: default;*/
+}
+
+@media screen and (min-width: 600px){
+    .navbar ul{
+        text-align: right;
+    }
+    .navbar li{
+        /*width: 120px;*/
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.2em;
+        border-bottom: 2px solid #17dd42;
+        display: inline-block;
+        margin: -2px;
+    }
+    .navbar li:hover{
+        border-bottom: 2px solid #222;
+    }
+    .navbar li.active{
+        border-bottom: 2px solid #222;
+    }
+}
+/*Finished styling the NavBar*/
