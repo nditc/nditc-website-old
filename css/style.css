@@ -24,7 +24,7 @@ body{
 }
 .navbar li{
     font-family: 'Montserrat', sans-serif;
-    margin-bottom: 2%
+    margin-bottom: 2%;
 }
 .navbar a{
     text-decoration: none;
@@ -74,3 +74,8 @@ body{
     }
 }
 /*Finished styling the NavBar*/
+
+/* The container application */
+#app {
+  margin: 1em;
+}
