@@ -1,77 +1,78 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
 body{
-    margin: 0;
-    padding: 0;
-    background-color: #222;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
 }
 
 /* Starting with the NavBar*/
 .navbar{
-    margin-top: 2%;
-    border-bottom: 2px solid #17dd42;
+  margin-top: 2%;
+  border-bottom: 2px solid #17dd42;
 }
 .navbar img{
-    margin-left: 45%;
-    width: 10%;
+  margin-left: 45%;
+  width: 10%;
 }
 .navbar ul{
-    vertical-align: bottom;
-    list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  vertical-align: bottom;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 .navbar li{
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 2%;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2%;
 }
 .navbar a{
-    text-decoration: none;
-    color: #17dd42;
-    display: block;
-}
-.navbar a:hover{
-    color: #fff;
-}
-.navbar a.active{
-    color: #fff;
-    /*cursor: default;*/
+  text-decoration: none;
+  color: #17dd42;
+  display: block;
 }
 
 @media screen and (min-width: 481px){
-    .navbar img{
-        margin-left: 4%;
-        width: 5%;
-    }
-    .navbar ul{
-        text-align: right;
-        display: inline-block;
-    }
-    .navbar li{
-        /*width: 120px;*/
-        height: 50px;
-        line-height: 50px;
-        font-size: 1.2em;
-        border-bottom: 2px solid #17dd42;
-        display: inline-block;
-        margin: -2px;
-    }
-    .navbar li:hover{
-        border-bottom: 2px solid #222;
-    }
-    .navbar li.active{
-        border-bottom: 2px solid #222;
-    }
+  .navbar img{
+    margin-left: 4%;
+    width: 5%;
+  }
+  .navbar ul{
+    text-align: right;
+    display: inline-block;
+  }
+  .navbar li{
+    /*width: 120px;*/
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.2em;
+    border-bottom: 2px solid #17dd42;
+    display: inline-block;
+    margin: -2px;
+  }
+  .navbar li:hover{
+    border-bottom-color: #222;
+  }
+  .navbar li.active{
+    border-bottom-color: #222;
+  }
+  
+  .navbar li.active a:hover {
+    color: #fff;
+  }
+  
+  .navbar li.active a {
+    color: #fff;
+  }
 }
 
 @media screen and (max-width: 480px){
-    .navbar{
-        border-bottom: none;
-    }
-    .navbar ul{
-        display: none;
-    }
+  .navbar{
+    border-bottom: none;
+  }
+  .navbar ul{
+    display: none;
+  }
 }
 /*Finished styling the NavBar*/
 
