@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:300');*/
 
 body{
     margin: 0;
@@ -8,69 +8,224 @@ body{
 
 /* Starting with the NavBar*/
 .navbar{
-    margin-top: 2%;
+	z-index: 10;
+	position: fixed;
+	width: 100vw;
     border-bottom: 2px solid #17dd42;
+	display: flex;
+	background: rgba(22,22,22,1);
+	justify-content: space-between;
 }
-.navbar img{
-    margin-left: 45%;
-    width: 10%;
+.navbar .logo-container{
+	background-color: #47ff7f;
+	padding-left: 1.5%;
+	/border: 1px solid white;
+	position: relative;
+	align-self: center;
+	padding: .7vw 2vw;
+    /margin-left: 45%;
+}
+.navbar .logo-container img{
+	/border: 1px solid black;
+	width: auto;
+	height: 5vw;
 }
 .navbar ul{
-    vertical-align: bottom;
+/*	bordeR: 1px solid white;*/
+	align-self: flex-end;
+	position: relative;
+	right: 2vw;
+	display: flex;
+/*    vertical-align: bottom;*/
     list-style: none;
-    text-align: center;
+/*    text-align: center;*/
     margin: 0;
     padding: 0;
 }
 .navbar li{
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 2%
+	align-self: center;
+    font-family: 'Raleway', sans-serif;
+    /margin-bottom: 2%;
+	display: flex;
+	justify-content: center;
+	/width: 120p;
+	/height: 50px;
+	padding: 1vw 1vw;
+	/line-height: 50px;
+	font-size: 1.2em;
+	/border-bottom: 2px solid #17dd42;
+	position: relative;
 }
 .navbar a{
+	color: #17dd42;
     text-decoration: none;
-    color: #17dd42;
     display: block;
+	transition: .2s;
+	transition-delay: .02s;
 }
-.navbar a:hover{
-    color: #fff;
+.navbar li a:hover{
+	color: #FFFFFF;
 }
-.navbar a.active{
-    color: #fff;
-    /*cursor: default;*/
-}
+/*
+    .navbar li:hover{
+        /border-bottom: 2px solid #222;
+    }
+*/
+    .navbar li.active{
+        /border-bottom: 2px solid #222;
+    }
+/***** make the left vals dynamic later *********/
+	.div1:after{
+		transition: .2s;
+		transition-timing-function: ease-out;
+		content: '';
+		left: .4em;
+		background: #222;
+		width: 90%;
+		position: absolute;
+		height: 2px;
+		top: 100%;
+	}
+	.div2:after{
+		left: 5em;
+		width: 5em;
+	}
+	.div3:after{
+		left: 11em;
+		width: 5em;
+	}
+	.div4:after{
+		left: 16.5em;
+		width: 6em;
+	}
 
 @media screen and (min-width: 481px){
+/*
     .navbar img{
         margin-left: 4%;
         width: 5%;
     }
-    .navbar ul{
-        text-align: right;
-        display: inline-block;
-    }
-    .navbar li{
-        /*width: 120px;*/
-        height: 50px;
-        line-height: 50px;
-        font-size: 1.2em;
-        border-bottom: 2px solid #17dd42;
-        display: inline-block;
-        margin: -2px;
-    }
-    .navbar li:hover{
-        border-bottom: 2px solid #222;
-    }
-    .navbar li.active{
-        border-bottom: 2px solid #222;
-    }
+*/
+
 }
 
+
 @media screen and (max-width: 480px){
+/*
     .navbar{
-        border-bottom: none;
+        /border-bottom: none;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		height: auto;
     }
+	.navbar img{
+		width: 4em;
+		height: 4em;
+		align-self: center;
+	}
     .navbar ul{
-        display: none;
+        display: flex;
+		flex-direction: row;
+		/border: 1px solid white;
+		justify-content: center;
+		min-height: 3em;
+		align-self: center;
     }
+	.navbar li{
+		font-size: .7em;
+		padding: .2em;
+		align-self: center;
+	}
+*/
 }
 /*Finished styling the NavBar*/
+
+
+
+
+/******** landing screen **********/
+.land{
+	width: 100vw;
+	height: 100vh;
+}
+.cover-container{
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+.cover-container:after{
+	top: 0;
+	content: '';
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.6), rgba(0,0,0,.8));
+}
+.cover-container img{
+	width: 100%;
+}
+.floating-motto{
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	right: 9vw;
+	top: 0vw;
+	position: absolute;
+	background: transparent;
+	font-family: 'Raleway',sans-serif;
+}
+.floating-motto .spacer:nth-of-type(1){
+	align-self: flex-end;
+	background: #49ff68;
+	height: 10vw;
+	width: 12vw;
+}
+.floating-motto h3{
+	color: #49ff68;
+/*	border: 1px solid black;*/
+	padding: .1em 0em;
+	margin: 0;
+	align-self: flex-end;
+	font-size: 4em;
+}
+.floating-motto .spacer:nth-of-type(2){
+	align-self: flex-end;
+	background: #49ff68;
+	flex-grow: 1;
+	width: 10vw;
+}
+.floating-motto h3 > span{
+	color: aliceblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
