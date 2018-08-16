@@ -1,13 +1,14 @@
 /*@import url('https://fonts.googleapis.com/css?family=Montserrat:300');*/
 
 body{
-    margin: 0;
-    padding: 0;
-    background-color: #222;
+  margin: 0;
+  padding: 0;
+  background-color: #222;
 }
 
 /* Starting with the NavBar*/
 .navbar{
+<<<<<<< HEAD
 	z-index: 10;
 	position: fixed;
 	width: 100vw;
@@ -106,9 +107,10 @@ body{
         width: 5%;
     }
 */
-
 }
+/*Finished styling the NavBar*/
 
+<<<<<<< HEAD
 
 @media screen and (max-width: 480px){
 /*
@@ -201,31 +203,7 @@ body{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* The container application */
+#app {
+  margin: 1em;
+}
