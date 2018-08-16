@@ -8,6 +8,7 @@ body{
 
 /* Starting with the NavBar*/
 .navbar{
+	top: 0;
 	z-index: 10;
 	position: fixed;
 	width: 100vw;
@@ -57,7 +58,7 @@ body{
 	position: relative;
 }
 .navbar a{
-	color: #17dd42;
+	color: #49ff68;
     text-decoration: none;
     display: block;
 	transition: .2s;
@@ -71,8 +72,8 @@ body{
         /border-bottom: 2px solid #222;
     }
 */
-    .navbar li.active{
-        /border-bottom: 2px solid #222;
+    .navbar li .active{
+        color: aliceblue;
     }
 /***** make the left vals dynamic later *********/
 	.div1:after{
