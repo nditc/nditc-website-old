@@ -1,7 +1,8 @@
 function updateStyles() {
 	document.querySelectorAll('.navbar ul li').forEach(function (elem) {
-		if (elem.className.indexOf('div1') != -1) { continue }
-		elem.className = '';
+		if (elem.className.indexOf('div1') == -1) {
+			elem.className = '';
+		}
 	})
 
 	let route = window.location.hash.substring(2);
