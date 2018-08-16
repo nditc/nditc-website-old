@@ -12,7 +12,6 @@ $(document).ready(function(){
 	$('.navbar li').hover(function(){
 		let divIndex = $('.navbar li').index(this);
 		divSelectorClassRemover(divIndex);
-		console.log("called");
 		$('.navbar li:first-child').addClass('div'+(divIndex+1));
 	})
 })
