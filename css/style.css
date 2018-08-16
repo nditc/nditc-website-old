@@ -4,6 +4,7 @@ body{
   margin: 0;
   padding: 0;
   background-color: #222;
+	overflow-x: hidden;
 }
 
 /* Starting with the NavBar*/
@@ -145,13 +146,14 @@ body{
 
 
 /******** landing screen **********/
-.land{
+.landing{
+	position: relative;
 	width: 100vw;
 	height: 100vh;
 }
 .cover-container{
 	overflow: hidden;
-	height: 100%;
+	height: 97%;
 	width: 100%;
 }
 .cover-container:after{
@@ -179,7 +181,7 @@ body{
 .floating-motto .spacer:nth-of-type(1){
 	align-self: flex-end;
 	background: #49ff68;
-	height: 10vw;
+	height: 13vw;
 	width: 12vw;
 }
 .floating-motto h3{
@@ -199,9 +201,19 @@ body{
 .floating-motto h3 > span{
 	color: aliceblue;
 }
+.floating-ideas{
+	bottom: 8vw;
+	left: 8vw;
+	position: absolute;
+}
+.floating-ideas .ideas{
+	color: white;
+	font-family: 'Raleway',sans-serif;
+	font-size: 10vw;
+	margin: 0;
+}
 
 
 /* The container application */
 #app {
-  margin: 1em;
 }
