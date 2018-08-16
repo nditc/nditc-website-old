@@ -1,9 +1,9 @@
 /*@import url('https://fonts.googleapis.com/css?family=Montserrat:300');*/
 
 body{
-  margin: 0;
-  padding: 0;
-  background-color: #222;
+	margin: 0;
+	padding: 0;
+	background-color: #222;
 	overflow-x: hidden;
 }
 
@@ -107,6 +107,32 @@ body{
         margin-left: 4%;
         width: 5%;
     }
+    .navbar ul{
+        text-align: right;
+        display: inline-block;
+    }
+    .navbar li{
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.2em;
+        border-bottom: 2px solid #17dd42;
+        display: inline-block;
+        margin: -2px;
+    }
+    .navbar li:hover{
+        border-bottom-color: #222;
+    }
+    .navbar li.active{
+        border-bottom-color: #222;
+    }
+
+    .navbar li.active a:hover {
+        color: #fff;
+    }
+
+    .navbar li.active a {
+        color: #fff;
+    }
 */
 }
 /*Finished styling the NavBar*/
@@ -138,7 +164,13 @@ body{
 		padding: .2em;
 		align-self: center;
 	}
-*/
+    .navbar{
+        border-bottom: none;
+    }
+    .navbar ul{
+        display: none;
+    }
+	*/
 }
 /*Finished styling the NavBar*/
 
