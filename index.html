@@ -1,36 +1,44 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Home || Notre Dame Information Technology Club - NDITC</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home || Notre Dame Information Technology Club - NDITC</title>
+    <link rel="stylesheet" href="css/style.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+	<script src="js/home.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+<body>
 
-        <div class="nav">
-            <div class="navbar">
-                <img src="logo.png" alt="">
-                <ul>
-                    <li id='homel'>
-                        <a href="#/home">HOME</a>
-                    </li>
-                    <li id='photosl'>
-                        <a href="#/photos">&nbsp;&nbsp;PHOTOS</a>
-                    </li>
-                    <li id='techiesl'>
-                        <a href="#/techies">&nbsp;&nbsp;TECHIES</a>
-                    </li>
-                    <li id='aboutl'>
-                        <a href="#/about">&nbsp;&nbsp;ABOUT US</a>
-                    </li>
-                </ul>
+    <div class="nav">
+        <div class="navbar">
+            <div class="logo-container">
+            	<img src="img/LOGO.png" alt="" class="src"><!--change links-->
             </div>
+            <ul>
+                <li class="active div1">
+                    <a class="active" href="#/home">HOME</a>
+                </li>
+                <li href="about.html">
+                    <a href="#/photos">PHOTOS</a>
+                </li>
+                <li>
+                    <a href="#/techies">TECHIES</a>
+                </li>
+                <li>
+                    <a href="#/about">ABOUT US</a>
+                </li>
+            </ul>
         </div>
+    </div>
+    <div id="app"></div>
+    <script type='text/javascript' src='js/anim.js'></script>
+    <script type='text/javascript' src='js/router.js'></script>
 
-        <div id='app'></div>
-
-        <script type='text/javascript' src='js/anim.js'></script>
-        <script type='text/javascript' src='js/router.js'></script>
-    </body>
+</body>
 </html>

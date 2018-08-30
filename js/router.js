@@ -5,11 +5,11 @@ const routes = {
     'techies': 'pages/techies.html',
     'about': 'pages/about.html',
 };
-  
+
 function getPage() {
     let route = window.location.hash.substring(2);
     let uri = routes[route];
-    
+
     fetch(uri)
         .then(function(response) {
             return response.text();
