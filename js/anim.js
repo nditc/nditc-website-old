@@ -1,7 +1,7 @@
 function updateStyles() {
 	document.querySelectorAll('.navbar ul li').forEach(function (elem) {
 		if (elem.className.indexOf('div1') == -1) {
-			elem.className = '';
+			elem.classList.remove('active');
 		}
 	})
 

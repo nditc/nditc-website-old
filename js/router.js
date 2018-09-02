@@ -4,6 +4,7 @@ const routes = {
     'photos': 'pages/photos.html',
     'techies': 'pages/techies.html',
     'about': 'pages/about.html',
+	'init': 'pages/init.html'
 };
 
 function getPage() {
