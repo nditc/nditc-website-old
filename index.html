@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home || Notre Dame Information Technology Club - NDITC</title>
     <link rel="stylesheet" href="css/style.css">
-	<script
-	  src="https://code.jquery.com/jquery-3.3.1.min.js"
-	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	  crossorigin="anonymous"></script>
-	<script src="js/home.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="css/init.css">
+
+	<!-- fonts -->
+	<link href="css/fonts.css" rel="stylesheet">
+
+
 </head>
 <body>
 
@@ -22,23 +22,30 @@
             </div>
             <ul>
                 <li class="active div1">
-                    <a class="active" href="#/home">HOME</a>
+                    <a class="active" id="homel" href="#/home">HOME</a>
                 </li>
+				<li>
+					<a href="#/init" id="initl"> init_2018 </a>
+				</li>
                 <li href="about.html">
-                    <a href="#/photos">PHOTOS</a>
+                    <a href="#/photos" id="photosl">PHOTOS</a>
                 </li>
                 <li>
-                    <a href="#/techies">TECHIES</a>
+                    <a href="#/techies" id="techiesl">TECHIES</a>
                 </li>
                 <li>
-                    <a href="#/about">ABOUT US</a>
+                    <a href="#/about" id="aboutl">ABOUT US</a>
                 </li>
             </ul>
         </div>
     </div>
     <div id="app"></div>
+    <script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
     <script type='text/javascript' src='js/anim.js'></script>
     <script type='text/javascript' src='js/router.js'></script>
-
+	<script src="js/home.js"></script>
 </body>
 </html>

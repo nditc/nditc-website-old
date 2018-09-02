@@ -2,8 +2,9 @@ const app = document.getElementById('app');
 const routes = {
     'home': 'pages/home.html',
     'photos': 'pages/photos.html',
-    'techies': 'pages/techies.html',
+    'techies': 'pages/techies/index.html',
     'about': 'pages/about.html',
+	'init': 'pages/init.html'
 };
 
 function getPage() {

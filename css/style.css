@@ -175,24 +175,23 @@ body{
 /*Finished styling the NavBar*/
 
 
-
-
 /******** landing screen **********/
 .landing{
 	position: relative;
 	width: 100vw;
-	height: 100vh;
+	height: 85vh;
+	overflow: visible;
 }
 .cover-container{
 	overflow: hidden;
-	height: 97%;
+	height: 100%;
 	width: 100%;
 }
 .cover-container:after{
 	top: 0;
 	content: '';
 	position: absolute;
-	height: 100vh;
+	height: 100%;
 	width: 100vw;
 	background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,.6), rgba(0,0,0,.8));
 }
@@ -200,10 +199,8 @@ body{
 	width: 100%;
 }
 .floating-motto{
-	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	right: 9vw;
 	top: 0vw;
 	position: absolute;
@@ -211,8 +208,8 @@ body{
 	font-family: 'Raleway',sans-serif;
 }
 .floating-motto .spacer:nth-of-type(1){
-	align-self: flex-end;
 	background: #49ff68;
+	align-self: flex-end;
 	height: 13vw;
 	width: 12vw;
 }
@@ -225,27 +222,183 @@ body{
 	font-size: 4em;
 }
 .floating-motto .spacer:nth-of-type(2){
-	align-self: flex-end;
 	background: #49ff68;
-	flex-grow: 1;
+	align-self: flex-end;
+	height: 40vh;
 	width: 10vw;
 }
 .floating-motto h3 > span{
 	color: aliceblue;
 }
 .floating-ideas{
-	bottom: 8vw;
+	bottom: 2vw;
 	left: 8vw;
 	position: absolute;
 }
 .floating-ideas .ideas{
-	color: white;
-	font-family: 'Raleway',sans-serif;
+	color: rgb(255,255,255);
+	font-family: Dosis_ExtraBold ,sans-serif;
+	font-weight: bolder;
 	font-size: 10vw;
 	margin: 0;
 }
 
 
+
+
+
+
+
+
+.about-us{
+	position: relative;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+}
+.about-us p{
+	font-family: sans-serif;
+	/letter-spacing: 3px;
+	align-self: flex-start;
+	margin: 7vw 9vw;
+	width: 40vw;
+	font-size: 1.3em;
+	color: #49ff68;
+	line-height: 1.5em;
+}
+.about-us .spacer{
+	background: #49ff68;
+	z-index: 2;
+	height: 15vw;
+	width: 10vw;
+	position: absolute;
+	top: 90%;
+	left: 20vw;
+}
+.more{
+	background-color: #FFFFFF;
+}
+.more p{
+	color: #222222;
+	align-self: flex-end;
+}
+
+
+
+
+
+.events_container{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background: #FEFEFE;
+	align-items: center;
+}
+.events_container .spacer{
+	position: absolute;
+	background: #292929;
+	width: 100%;
+	height: 40vh;
+}
+.events_container .spacer:nth-of-type(1){
+	background: #FEFEFE;
+}
+.events_container .spacer:nth-of-type(2){
+	top: 40vh;
+	background: #FEFEFE;
+}
+.events_container .spacer:nth-of-type(3){
+	top: 90vh;
+	background: #1a1a1a;
+	height: 50vh;
+}
+
+
+.events_container .title{
+	backrground-color: #49ff68;
+	position: relative;
+	color: #FEFEFE;
+	font-size: 4em;
+	font-family: neoteric_bold;
+	margin-bottom: .3vw;
+}
+.events_container .title::before{
+	content: '';
+	height: 30%;
+	width: 100%;
+	top: 100%;
+	background: #FEFEFE;
+	position: absolute;
+	z-index: -.5;
+}
+.events_container .subtitle{
+	position: relative;
+	color: #FEFEFE;
+	font-size: 2.5em;
+	margin-bottom: 0;
+	font-family: neoteric_bold;
+	margin-bottom: 0;
+}
+.events{
+	display: flex;
+	position: relative;
+	margin-top: 2vw;
+	height: 60vh;
+	overflow: hidden;
+	width: 80vw;
+	margin-bottom: 2vw;
+}
+.left_event{
+	border-radius: .3vw;
+	position: relative;
+	width: 63%;
+	height: 100%;
+	overflow: hidden;
+	/border: .2vw solid #F0F0F0;
+}
+.event_pic{
+	position: absolute;
+	left: 50%;
+
+	transform: translateX(-50%);
+	height: 100%;
+	min-width: 100%;
+}
+.event_title{
+	padding-top: 1vw;
+	padding-left: 5%;
+	padding-bottom: 1vw;
+	background: rgba(0,0,0,.8);
+	font-family: code_bold;
+	color: #FEFEFE;
+	border-top: 2px solid white;
+	font-size: 3em;
+	bottom: 0;
+	width: 100%;
+	position: absolute;
+}
+.right_events{
+	margin-left: 1vw;
+	position: relative;
+	flex-grow: 1;
+	height: 100%;
+	align-self: flex-end;
+}
+.right_event{
+	margin-bottom: 1vw;
+	border-radius: .3vw;
+	overflow: hidden;
+	height: 48.5%;
+	position: relative;
+}
+.right_event .event_title{
+	font-size: 1.8em;
+}
+
+
+
+
 /* The container application */
 #app {
+	margin-top: 6.7vw;  /make this shit dynamic
 }

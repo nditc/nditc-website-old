@@ -1,0 +1,32 @@
+@font-face{
+	font-family: CODE_bold;
+	src: url(../fonts/CODE%20Bold.otf);
+}
+@font-face{
+	font-family: CODE_light;
+	src: url(../fonts/CODE%20light.otf);
+}
+@font-face{
+	font-family: Neoteric_bold;
+	src: url(../fonts/NEOTERIC_bold.ttf);
+}
+@font-face{
+	font-family: Neoteric_regular;
+	src: url(../fonts/NEOTERIC_regular.ttf);
+}
+@font-face{
+	font-family: Rock_regular;
+	src: url(../fonts/ROCK.TTF);
+}
+@font-face{
+	font-family: Rock_bold;
+	src: url(../fonts/rockb.ttf);
+}
+@font-face{
+	font-family: Dosis_bold;
+	src: url("../fonts/dosis_family/Dosis-bold.otf")
+}
+@font-face{
+	font-family: Dosis_ExtraBold;
+	src: url("../fonts/dosis_family/Dosis-ExtraBold.otf")
+}
