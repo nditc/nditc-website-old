@@ -12,3 +12,7 @@ function updateStyles() {
 
 window.addEventListener('load', updateStyles);
 window.addEventListener('hashchange', updateStyles);
+
+function typeWrite(elem, text){
+	
+}
