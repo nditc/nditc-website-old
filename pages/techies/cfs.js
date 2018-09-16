@@ -1,19 +1,30 @@
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
 var tRef;
+var a;
+
+function getPhoto(roll, name, desc, pass){
+    var file = document.getElementById("addPhoto").files[0];
+    var loc = firebase.storage().ref("images/" + roll + ".jpg");
+    loc.put(file);
+    loc.getDownloadURL().then(function(url){
+        addData("techies", roll, name, desc, md5(pass), url);
+        console.log('done!');
+    });
+    
+}
 
 function orgData() {
     var name = document.getElementById("name").value;
     var roll = document.getElementById("roll").value;
     var desc = document.getElementById("desc").value;
     var pass = document.getElementById("pass").value;
-
-    addData("techies", roll, name, desc, md5(pass));
+    getPhoto(roll, name, desc, pass);
 }
 
-function addData(collection, roll, name, desc, pass) {
+function addData(collection, roll, name, desc, pass, photo) {
     var docData = {
-        roll: roll, name: name, desc: desc, pass: pass, dev: false, design:false, comp:false, others: "", projects:"<p></p>"
+        roll: roll, name: name, desc: desc, pass: pass, dev: false, design:false, comp:false, others: "", projects:"<p></p>", photo:photo
     };
     db.collection(collection).add(docData)
         .then(function (docRef) {
@@ -32,7 +43,7 @@ function getSkillsOf(techie){
     if(techie.design) htm += ", UX/UI/Graphics Design";
     if(techie.comp) htm += ", Competitive Programming";
     //console.log(htm);
-
+    
     return htm;
 }
 
@@ -47,6 +58,7 @@ function getData(roll) {
     var queryDesc = document.getElementById("queryDesc");
     var queryProj = document.getElementById("queryProjects");
     var querySkills = document.getElementById("querySkills");
+    var queryPhoto = document.getElementById("queryPhoto");
 
     queryName.innerHTML = "No one found! Probably, you are not registered yet";
     queryDesc.innerHTML = "Could not show a description";
@@ -59,6 +71,7 @@ function getData(roll) {
                 queryName.innerHTML = docu.data().name;
                 queryDesc.innerHTML = docu.data().desc;
                 queryProj.innerHTML = docu.data().projects;
+                queryPhoto.src = docu.data().photo;
                 querySkills.innerHTML = getSkillsOf(docu.data());
             }
             //console.log(docu.id + ` => ` + docu.data().roll);
@@ -74,6 +87,7 @@ function disCreds(docu){
     var compRef = document.getElementById("comp");
     var othersRef = document.getElementById("others");
     var projectsRef = document.getElementById("projects");
+    var photoRef = document.getElementById("formPhoto");
 
     var dataRef = docu.data();
     tRef = docu.id;
@@ -86,6 +100,7 @@ function disCreds(docu){
     compRef.checked = dataRef.comp;
     othersRef.value = dataRef.others;
     projectsRef.value = dataRef.projects;
+    photoRef.src = dataRef.photo;
 
     //console.log(dataRef.dev);
     //console.log(docu.id);

@@ -98,7 +98,8 @@
         <div class="addBasic">
             Name: <input type="text" id="name" placeholder="e.g: Anik Hasan"><br><br>
             Roll: <input type="number" id="roll" placeholder="e.g: 11903RRR"><br><br>
-            Description: <br> <textarea id="desc" placeholder="a little bit about you"></textarea><br><br><br>
+            Description: <br> <textarea id="desc" placeholder="a little bit about you"></textarea><br><br>
+            Photo: <input type="file" id="addPhoto"><br><br><br>
         </div>
         <div class="addPass">
             Password: <input type="password" id="pass" class="passfield" disabled><br><br>
@@ -113,6 +114,7 @@
         Enter a Roll here: <input type="number" id="query"><br><br>
         <button id="getClick" onclick="orgetData()">Enter</button><br>
         <p>
+            <img src="" id="queryPhoto"><br>
             Name: <span id="queryName">No one found! Probably, you are not registered yet</span><br>
             Description: <span id="queryDesc">Could not show a description</span><br>
             Skills: <span id="querySkills"></span><br>
@@ -130,9 +132,11 @@
 
     <div class="modal" id="modalMain">
         <div class="modal-content" id="updateForm"><!-- Using lots of id. Inefficient. HTML pari na :'( -->
+            <img src="" id="formPhoto"><br><br>
+            Change Photo: <input type="file" id="updatePhoto"><br><br>
             Name: <input type="text" id="formName"><br><br>
             Description: <input type="text" id="formDesc"><br><br>
-
+            
             Skills
             <div id="skills">
                 <input type="checkbox" id="dev">Web Development / Software Development <br>
@@ -156,8 +160,10 @@
 </div>
 
 
+<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-storage.js"></script>
 <script src="firebase_base.js"></script>
 <script src="cfs.js"></script>
 <script src="minorUX.js"></script>

@@ -1,3 +1,5 @@
+var photo;
+
 function showHide(vis) {
     //document.getElementById(vis).style.display = "block";
     //document.getElementById(hid).style.display = "none";
@@ -20,7 +22,7 @@ function showProf() {
 function throwPassError() {
     var passErr = document.getElementById("passError");
 
-    passErr.innerHTML = 'Invalid Password Format!';
+    passErr.innerHTML = 'Passwords do not match';
     passErr.style.color = 'red';
 }
 
@@ -56,7 +58,7 @@ function addedBasicStuff() {
         for (i = 0; i < a.length; i++) {
             a[i].disabled = false;
         }
-    }
+    } 
     else {
         for (i = 0; i < a.length; i++) {
             a[i].disabled = true;
@@ -71,7 +73,7 @@ function updateMatch() {
 
     if (roll && pass) {
         enter.disabled = false;
-    }
+    } 
     else {
         enter.disabled = true;
     }
@@ -103,10 +105,6 @@ function showForm(){
                 orgCreds(doc.data().roll);
                 //return true;
             }
-            else{
-                upErr.style.color = "red";
-                upErr.innerHTML = "Failed!"
-            }
             //console.log(doc.id, " => ", doc.data());
         });
     });
@@ -121,11 +119,27 @@ function updateEverything(){
     var othersRef = document.getElementById("others").value;
     var projectsRef = document.getElementById("projects").value;
 
-    var docData = {
-        name: nameRef, desc: descRef, dev: devRef, design:designRef, comp:compRef, others: othersRef, projects:projectsRef
-    };
+    var photoChanged = document.getElementById("updatePhoto");
 
-    submitAll(docData);
+    if(photoChanged.value == ""){
+        var docData = {
+            name: nameRef, desc: descRef, dev: devRef, design:designRef, comp:compRef, others: othersRef, projects:projectsRef 
+        };
+        submitAll(docData);
+    }
+
+    else{
+        var file = document.getElementById("updatePhoto").files[0];
+        var loc = firebase.storage().ref("images/" + roll + ".jpg");
+        loc.put(file);
+        loc.getDownloadURL().then(function(url){
+            var docData = {
+                name: nameRef, desc: descRef, dev: devRef, design:designRef, comp:compRef, others: othersRef, projects:projectsRef, photo:url
+            };
+            submitAll(docData);
+        });
+    }
+
 }
 
 document.addEventListener('input', function (evt) {
