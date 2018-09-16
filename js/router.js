@@ -3,15 +3,8 @@ const app = document.getElementById('app');
 const routes = {
     'home': ['pages/home.html', ['css/home.css'], ['js/home.js'] ],
     'photos': ['pages/photos.html', ['css/photos.css'], ['js/photos.js'] ],
-	'techies': ['pages/techies/index.html', ['css/techies.css'], ['js/techies.js',
-																  'https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js',
-																  'https://www.gstatic.com/firebasejs/5.4.1/firebase.js',
-																  'https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js',
-																  'https://www.gstatic.com/firebasejs/5.4.1/firebase-storage.js',
-																  'js/firebase_base.js',
-																  'js/cfs.js',
-																  'js/minorUX.js',
-																  'js/md5.min.js'] ],
+    'techies': ['pages/techies/index.html', ['css/techies.css'], ['js/minorUX.js',
+                                                                  'js/techies.js'] ],
     'about': ['pages/about.html', ['css/about.css'], ['js/about.js'] ],
 	'init': ['pages/init.html', ['css/init.css'], ['js/init.js'] ]
 };
