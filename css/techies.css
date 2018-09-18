@@ -72,7 +72,7 @@ body{
 	position: relative;
 	margin: .2em;
 	-webkit-text-stroke-width: 6px;
-    -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: black;
 	font-size: 5em;
 	font-family: neoteric_bold;
 }
@@ -110,68 +110,148 @@ body{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	margin: 2em 4em;
 }
 .techie{
+	box-shadow: 0px 0px 1em rgba(0,0,0,.2);
+	display: flex;
+	flex-direction: column;
+	border: 2px solid black;
+	border-radius: .5em;
 	overflow: hidden;
 	margin: 1em;
 	position: relative;
-	width: 20vw;
+	width: 23em;
+	height: 25em;
+	justify-content: center;
+	cursor: pointer;
 }
 .techie .dp{
-	width: 100%;
+	margin: 1em;
+	margin-bottom: .5em;
+	border-radius: 100%;
+	position: relative;
+	width: 70%;
+	align-self: center;
+	transition: .3s;
+	transition-timing-function: ease-out;
 }
 
-.techie:hover .bio-container{
-	/opacity: 1;
-	transform: translateY(0%);
+.onFocus{
+	cursor: default;
+}
+
+.techie .hidden{
+	opacity: 0;
+}
+.techie .focused{
+	transform: translateY(-15em);
 }
 
 .bio-container{
 	display: flex;
 	flex-direction: column;
-	/justify-content: center;
-	transition-delay: .2s;
+	align-items: center;
 	transition: .4s;
 	transition-timing-function: ease-in-out;
 	/opacity: 0;
-	transform: translateY(80%);
-	position: absolute;
+	/transform: translateY(-50%);
+	position: relative;
 	top: 0;
 	height: 100%;
-	color: #FFFFFF;
+	color: #222222;
 	font-family: monospace;
 	font-size: 1.1em;
-	background: rgba(0,0,0,.7);
 }
 
 .bio-container .name{
 	position: relative;
 	margin: 0;
-	padding: .5em;
-	font-size: 2em;
+	padding: .2em;
+	padding-bottom: .3em;
+	font-size: 2.5em;
 }
 .bio-container .name:after{
 	top: 90%;
-	left: .5em;
+	transform: translateX(-50%);
+	left: 50%;
 	position: absolute;
 	content: '';
-	background: #FFFFFF;
-	height: 6%;
-	width: 20%;
+	background: #222222;
+	height: 4%;
+	width: 80%;
 }
 
 .bio-container .interests{
 	margin: 0;
 	padding: 1em;
+	padding-top: .5em;
 }
 
 .bio-container .bio{
-	margin: 0;
+	margin-left: .5em;
 	padding: 1em;
+	text-align: left;
 }
 
+.bio-container .icons-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-grow: 1;
+	cursor: pointer;
+	width: 100%;
+	min-height: 3em;
+	position: relative;
+	transition: .2s;
+	overflow: auto;
+	padding: .2em;
+}
+
+.bio-container .icons-container .icon{
+	align-self: center;
+	padding: .5em;
+	width: 2.5em;
+	height: 2.5em;
+}
+
+.bio-container .icons-container .read-more{
+	width: 10em;
+	display: flex;
+	align-self: center;
+	border: 1px solid #222222;
+	width: auto;
+	border-radius: 2em;
+	height: 2em;
+	transition: .2s;
+}
+
+.icons-container::-webkit-scrollbar{
+	display: none;
+}
+
+.bio-container .icons-container .read-more .arrow-pic{
+	align-self: center;
+	margin-top: -.1em;
+	height: 1.4em;
+	width: 1.4em;
+}
+
+.read-more span{
+	margin-left: .3em;
+	/border: 1px solid black;
+	margin-top: -5px;
+	text-align: center;
+	align-self: center;
+	/border: 1px solid black;
+	font-family: neoteric_regular;
+	font-size: 1.2em;
+}
+
+.read-more:hover{
+	background: rgba(0,0,0,.1);
+}
 
 
 
