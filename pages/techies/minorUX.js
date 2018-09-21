@@ -137,3 +137,85 @@ document.addEventListener('input', function (evt) {
         updateMatch();
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// card anims
+let cards = document.getElementsByClassName('techie');
+for(let i=0; i<cards.length; i++){
+	cards[i].addEventListener('click', function(e){
+		
+		let card = (function(){
+			let path = e.composedPath();
+			for(let i=0; i<path.length; i++){
+				if(path[i].classList.contains('techie')){
+				   return path[i];
+				}
+			}
+			console.log("couldn't find techie in event propagation path");
+		})();
+		
+		let bio_container = card.querySelector('.bio-container');
+		let dp_container = card.querySelector('.dp');
+		
+		card.classList.add('onFocus');
+		dp_container.classList.add('hidden');
+		bio_container.classList.add('focused');
+		//console.log(card);
+	})
+}
+
+window.addEventListener('click', function(e){
+	const path = e.composedPath();
+	let found = false;
+	for(let i=0; i<path.length; i++){
+		if(path[i].classList){
+			if(path[i].classList.contains('techie') && path[i].classList.contains('onFocus')){
+				found = true;
+				return;
+			}	
+		}
+	}
+	
+	if(!found){
+		let cards =	document.getElementsByClassName('onFocus');
+		while(cards.length > 0){
+			let card = cards[0];
+			let bio_container = card.querySelector('.bio-container');
+			let dp_container = card.querySelector('.dp');
+
+			card.classList.remove('onFocus');
+			dp_container.classList.remove('hidden');
+			bio_container.classList.remove('focused');	
+		}
+		return;	
+	}
+})
+
+
+console.log("loaded");
+
+
+
+
+
+
