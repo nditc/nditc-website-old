@@ -3,7 +3,7 @@
 	margin-top: 6.7vw;  /make this shit dynamic
 }
 
-#loginl {
+#loginl, #logoutl {
     background-color: #222;
     border: none;
     color: #49ff68;
