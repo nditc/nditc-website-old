@@ -1,0 +1,60 @@
+.login-mother-container{
+	z-index: 11;
+	/ use translate to make the pop up slide down from above
+	/transform: translateY(-100%);
+	margin: 0 auto;
+	width:80%;
+	border: 1em solid white;
+	display: flex;
+	flex-direction: column;
+}
+.login-visible{
+	transform: translateY(0%);
+}
+.login-container {
+	width: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+}
+.login-icon{
+	align-self: center;	
+	width: 20em;
+}
+.login-item {
+	font-family: code_regular;
+	align-self: center;
+	width: 40em;
+	border: 1px solid #222222;
+	border-radius: .2em;
+	margin: .5em 1%;
+	padding: .8em 1em;
+}
+.login-button:hover{
+	/background-color: rgba(47, 89, 119, 1);
+	box-shadow: 0px 0px .05em .01em #FEFEFE;
+}
+.login-button {
+	font-family: code_bold;
+	background-color: rgba(47, 89, 119, .2);
+	color: white;
+	border: none;
+	cursor: pointer;
+	transition: .2s;
+	margin-top: 2em;
+	height: 3em;
+	width: 20em;
+}
+input[type="email"]{
+	font-family: code_bold;
+}
+input[type="password"]{
+	font-family: code_bold;
+}
+input#login-submit{
+	font-size: 2em;
+	font-family: rock_bold;
+}

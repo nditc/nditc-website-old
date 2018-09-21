@@ -2,3 +2,30 @@
 #app {
 	margin-top: 6.7vw;  /make this shit dynamic
 }
+
+
+
+
+/* login page styles */
+.login-container {
+	width:50%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+}
+.login-item {
+	margin:1%;
+	padding:8px 10px;
+}
+.login-button:hover{
+	opacity:0.8;
+}
+.login-button {
+	background-color: #2F5977;
+	color: white;
+	border: none;
+	cursor: pointer;
+}

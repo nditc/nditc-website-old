@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Login</title>
+	<link href="../../css/fonts.css" rel="stylesheet">
 	<style>
 		.login-container {
 			width:50%;
@@ -13,28 +14,40 @@
 		    flex-direction: column;
 		}
 		.login-item {
-			margin:1%;
+			border: 1px solid #222222;
+			border-radius: .2em;
+			margin: .5em 1%;
 		    padding:8px 10px;
 		}
 		.login-button:hover{
 			opacity:0.8;
 		}
 		.login-button {
+			font-family: code_bold;
 			background-color: #2F5977;
 			color: white;
 			border: none;
 			cursor: pointer;
+			transition: .2s;
+		}
+		p{
+			font-family: rock_bold;
+		}
+		input#login-submit{
+			font-size: 2em;
+			font-family: rock_bold;
 		}
 	</style>
 </head>
 <body>
 	<center>
+	<p>gg</p>
 		<img width="25%" src="../img/login-icon.png" alt="Avatar"><br>
 		<form class="login-container">
 			<input class="login-item" type="email" name="email" placeholder="Enter Email Address">
 			<input class="login-item" type="password" name="password" placeholder="Enter Password">
-			<input class="login-item login-button" type="submit" name="login" value="Login">
+			<input class="login-item login-button" id="login-submit" type="submit" name="login" value="Login">
 		</form>
 	</center>
-<body>
+</body>
 </html>

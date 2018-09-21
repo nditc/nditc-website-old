@@ -6,7 +6,8 @@ const routes = {
     'techies': ['pages/techies/index.html', ['css/techies.css'], ['js/minorUX.js',
                                                                   'js/techies.js'] ],
     'about': ['pages/about.html', ['css/about.css'], ['js/about.js'] ],
-	'init': ['pages/init.html', ['css/init.css'], ['js/init.js'] ]
+	'init': ['pages/init.html', ['css/init.css'], ['js/init.js'] ],
+	'login': ['pages/login.html', ['css/login.css'], [''] ]
 };
 
 
