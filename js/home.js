@@ -2,8 +2,8 @@ let loginbox = document.getElementById('loginbox');
 let glassfield = document.getElementById('glassfield');
 
 document.getElementById('loginl').addEventListener('click', () => {
-    loginbox.style.display = 'block';
-    glassfield.style.display = 'block';
+    loginbox.style.display = 'flex';
+    glassfield.style.display = 'flex';
 });
 
 document.getElementById('loginclose').addEventListener('click', () => {

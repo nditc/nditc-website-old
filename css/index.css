@@ -3,6 +3,13 @@
 	margin-top: 6.7vw;  /make this shit dynamic
 }
 
+#loginl {
+    background-color: #222;
+    border: none;
+    color: #49ff68;
+    margin: 0.2em;
+}
+
 /* The login pages */
 #glassfield {
     position: fixed;
