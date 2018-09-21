@@ -67,38 +67,22 @@ body{
 .navbar li a:hover{
 	color: #FFFFFF;
 }
-/*
-    .navbar li:hover{
-        /border-bottom: 2px solid #222;
-    }
-*/
-    .navbar li .active{
-        color: aliceblue;
-    }
+
+.navbar li .active{
+    color: aliceblue;
+}
 /***** make the left vals dynamic later *********/
-	.div1:after{
-		transition: .2s;
-		transition-timing-function: ease-out;
-		content: '';
-		left: .4em;
-		background: #222;
-		width: 90%;
-		position: absolute;
-		height: 2px;
-		top: 100%;
-	}
-	.div2:after{
-		left: 5em;
-		width: 5em;
-	}
-	.div3:after{
-		left: 11em;
-		width: 5em;
-	}
-	.div4:after{
-		left: 16.5em;
-		width: 6em;
-	}
+.active:after{
+	transition: .2s;
+	transition-timing-function: ease-out;
+	content: '';
+	background: lightgreen;
+	width: 90%;
+	position: absolute;
+	height: 2px;
+	top: 100%;
+    left: 5%;
+}
 
 @media screen and (min-width: 481px){
 /*

@@ -16,8 +16,8 @@
     <script src='https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js' type='text/javascript'></script>
     <script src='https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js' type='text/javascript'></script>
     <script src='https://www.gstatic.com/firebasejs/5.4.1/firebase-storage.js' type='text/javascript'></script>
-    <script src='js/md5.min.js' type='text/javascript'></script>
-    <script src='js/mustache.min.js' type='text/javascript'></script>
+    <script src='js/router.js' type='text/javascript'></script>
+
     
     <!-- Firebase initializations -->
     <script>
@@ -45,8 +45,8 @@
             	<img src="img/LOGO.png" alt="" class="src"><!--change links-->
             </div>
             <ul>
-                <li class="active div1">
-                    <a class="active" id="homel" href="#/home">HOME</a>
+                <li class="active">
+                    <a id="homel" href="#/home">HOME</a>
                 </li>
 				<li>
 					<a href="#/init" id="initl"> init_2018 </a>
@@ -61,17 +61,25 @@
                     <a href="#/about" id="aboutl">ABOUT US</a>
                 </li>
                 <li>
-                    <a href="#/login" id="aboutl">LOG IN</a>
+                    <button id="loginl">LOG IN</button>
                 </li>
             </ul>
         </div>
     </div>
     <div id="app"></div>
-    <script
-	  src="https://code.jquery.com/jquery-3.3.1.min.js"
-	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-	  crossorigin="anonymous"></script>
-    <script type='text/javascript' src='js/anim.js'></script>
-    <script type='text/javascript' src='js/router.js'></script>
+    
+    <!-- the login module -->
+    <div id='glassfield' style='display:none'></div>
+    <div id='loginbox' style='display:none'>
+    	<img width="25%" src="/img/login-icon.png" alt="Avatar"><br>
+        <button id="loginclose"><span></span></button>
+    	<form class="login-container">
+    		<input class="login-item" type="email" name="email" placeholder="Enter Email Address">
+    		<input class="login-item" type="password" name="password" placeholder="Enter Password">
+    		<input class="login-item login-button" id="login-submit" type="submit" name="login" value="Login">
+    	</form>
+        <p id="passError"></p>
+    </div>
+    <script src='js/home.js' type='text/javascript'></script>
 </body>
 </html>

@@ -1,10 +1,8 @@
-const app = document.getElementById('app');
-
 const routes = {
     'home': {
         'page': 'pages/home.html',
         'styles': ['css/home.css'],
-        'scripts': ['js/home.js']
+        'scripts': []
     },
     'photos': {
         'page': 'pages/photos.html', 
@@ -12,16 +10,12 @@ const routes = {
         'scripts': ['js/photos.js']
     },
     'techies': {
-        'page': 'pages/techies/index.html',
+        'page': 'pages/techies.html',
         'styles': ['css/techies.css'],
         'scripts': [
             'js/techies.js',
-            'https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js',
-            'https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js',
-            'pages/techies/firebase_base.js',
-            'pages/techies/cfs.js',
-            'pages/techies/minorUX.js',
-            'pages/techies/md5.min.js']
+            'js/minorUX.js',
+            'js/mustache.min.js']
     },
     'about': {
         'page': 'pages/about.html',
@@ -80,9 +74,11 @@ function applyStyleAndScripts(pageName){
 
 
 function getPage() {
+    const app = document.getElementById('app');
     let pageName = window.location.hash.substring(2);   //store the target page name in var route
-    let uri = routes[pageName]['page']						//fetch the taget page uri from the 'routes' dicrtionary
+    let uri = routes[pageName]['page']					//fetch the taget page uri from the 'routes' dicrtionary
 	
+    
     fetch(uri)
         .then(function(response) {
             return response.text();
