@@ -9,14 +9,6 @@ function showHide(vis) {
     }
 }
 
-/*function showReg() {
-    swapToggle("reg", "prof");
-}
-
-function showProf() {
-    swapToggle("prof", "reg");
-}*/
-
 function throwPassError() {
     var passErr = document.getElementById("passError");
 
@@ -209,12 +201,3 @@ window.addEventListener('click', function(e){
 		return;	
 	}
 })
-
-
-console.log("loaded");
-
-
-
-
-
-
