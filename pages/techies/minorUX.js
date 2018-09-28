@@ -180,7 +180,6 @@ for(let i=0; i<cards.length; i++){
 		card.classList.add('onFocus');
 		dp_container.classList.add('hidden');
 		bio_container.classList.add('focused');
-		//console.log(card);
 	})
 }
 
