@@ -35,6 +35,11 @@ document.getElementById('login-submit').addEventListener('click', (e) => {
         glassfield.style.display = 'none';
         console.log('Signed in!');
     }).catch((err) => {
+		if(err){
+			//bringing back the login window again if error happens
+			loginbox.style.display = 'flex';
+        	glassfield.style.display = 'block';
+		}
         document.getElementById('pass-error').innerHTML = err.message;
     })
 });
