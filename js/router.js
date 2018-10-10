@@ -4,10 +4,10 @@ const routes = {
         'styles': ['css/home.css'],
         'scripts': []
     },
-    'photos': {
-        'page': 'pages/photos.html', 
-        'styles': ['css/photos.css'], 
-        'scripts': ['js/photos.js']
+    'activities': {
+        'page': 'pages/activities.html', 
+        'styles': ['css/activities.css'], 
+        'scripts': ['js/activities.js']
     },
     'techies': {
         'page': 'pages/techies.html',
