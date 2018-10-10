@@ -26,6 +26,11 @@ const routes = {
         'page': 'pages/init.html',
         'styles': ['css/init.css'],
         'scripts': ['js/init.js']
+    },
+	'profile': {
+        'page': 'pages/profile.html',
+        'styles': ['css/profile.css'],
+        'scripts': ['js/profile.js']
     }
 };
 
@@ -42,7 +47,6 @@ function applyStyleAndScripts(pageName){
 		StylesheetNode.type = 'text/css';
 		StylesheetNode.rel = 'stylesheet';
 		StylesheetNode.href = route;
-		//StylesheetNode.media = 'screen';
 		head.appendChild(StylesheetNode);
 	})
 	
