@@ -5,7 +5,7 @@
 	</div>
 	
 	<div class="techies-container">
-		<div class="techie template">
+		<div class="techie template" data-uid="{{ uid }}">
 			<img class="dp" alt="{{ name }}'s photo'" src="{{ photo }}">
 			<div class="bio-container">
 				<p class="name">{{ name }}</p>
@@ -16,43 +16,39 @@
 	</div>
 	
 	<div class="techie-details-container hidden">
-		<div class="profile-info">
-			<div class="dp">
-				<img src="/img/techieX.jpg">
-			</div>
-			<div class="intro">
-				<div class="name">Al-Mubin Khan Nabil</div>
-				<div class="extra-stuff">
-					<table>
-						<tr>
-							<th class="title">SCHOOL</th>
-							<td class="info">St. Gregory's High School</td>
-						</tr>
-						<tr>
-							<th class="title">COLLEGE</th>
-							<td class="info">Notre Dame College</td>
-						</tr>
-						<tr>
-							<th class="title">INTERESTS</th>
-							<td class="info">Doing Shits, Making shits, eating shits</td>
-						</tr>
-						<tr>
-							<th class="title">SKILLS</th>
-							<td class="info">Flying, Riding, Dying, Shitting, Peeing</td>
-						</tr>
-					</table>
+		<div class="techie-details template">
+			<div class="profile-info">
+				<div class="dp">
+					<img src="{{ photo }}">
+				</div>
+				<div class="intro">
+					<div class="name">{{ name }}</div>
+					<div class="extra-stuff">
+						<table>
+                            <tr>
+                                <th class="title">BIO</th>
+                                <td class="info">{{ bio }}</td>
+							<tr>
+								<th class="title">SKILLS</th>
+								<td class="info">{{ skills }}</td>
+							</tr>
+                            <tr>
+								<th class="title">ROLL</th>
+								<td class="info">{{ roll }}</td>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</div>
+			<div class="bio">
+					<p>{{ desc }}</p>
+			</div>
+            <div class="go-back">
+                <img id="arrow" src="/icons/arrow.png">
+            </div>
 		</div>
-		<div class="bio">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates ratione nesciunt dolore natus sed provident, obcaecati ea similique at reprehenderit doloremque quo, explicabo odio minima iste, quia aperiam sequi iure!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem unde quo, perspiciatis iure error, natus, architecto esse odit velit enim alias ipsum deleniti recusandae officia? Non quibusdam tempore itaque. Sunt!   lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo at ratione expedita voluptates officiis dolores, hic quibusdam vitae praesentium accusantium temporibus odio cumque necessitatibus, ad nihil, error veniam! Cum, eligendi!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim maiores ratione atque labore consequuntur fugiat dolore impedit voluptatibus praesentium, totam sequi, placeat incidunt magni iure ad veniam a. Necessitatibus, alias.<br><br>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi repudiandae molestias totam ut reprehenderit repellat neque, necessitatibus at placeat voluptatibus. Dignissimos pariatur, provident sint! Fugiat laborum suscipit, minima eius velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis dolor, eos enim minima similique mollitia blanditiis et ea facere corporis quisquam ab ullam. Fugiat aliquid pariatur, veritatis deleniti. Minus, libero?</p>
-		</div>
-		<div class="go-back">
-			<img id="arrow" src="/icons/arrow.png">
-		</div>
-		
 	</div>
+
 </div>    
     
 <div>
