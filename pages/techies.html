@@ -1,21 +1,57 @@
 <div class="mother-container">
+	<div id="loading"></div>
 	<div class="title-container">
 		<h1 class="title">TECHIES<span id="blinker"></span></h1>
 	</div>
 	
 	<div class="techies-container">
-		<div class="techie template">
-			<img class="dp" src="/img/techie.jpg">
+		<div class="techie template" data-uid="{{ uid }}">
+			<img class="dp" alt="{{ name }}'s photo'" src="{{ photo }}">
 			<div class="bio-container">
 				<p class="name">{{ name }}</p>
 				<p class="interests">{{ skills }}</p>
-				<p class="bio">{{ bio }}</p>
+				<p class="intro">{{ bio }}</p>
 			</div>
 		</div>
 	</div>
+	
+	<div class="techie-details-container hidden">
+		<div class="techie-details template">
+			<div class="profile-info">
+				<div class="dp">
+					<img src="{{ photo }}">
+				</div>
+				<div class="intro">
+					<div class="name">{{ name }}</div>
+					<div class="extra-stuff">
+						<table>
+                            <tr>
+                                <th class="title">BIO</th>
+                                <td class="info">{{ bio }}</td>
+							<tr>
+								<th class="title">SKILLS</th>
+								<td class="info">{{ skills }}</td>
+							</tr>
+                            <tr>
+								<th class="title">ROLL</th>
+								<td class="info">{{ roll }}</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="bio">
+					<p>{{ desc }}</p>
+			</div>
+            <div class="go-back">
+                <img id="arrow" src="/icons/arrow.png">
+            </div>
+		</div>
+	</div>
+
 </div>    
     
-<div class="gg">
+<div>
 	<div class="select">
         <button onclick="showHide('addStuff')">Register</button>
         <button onclick="showHide('getStuff')">Your Profile</button>

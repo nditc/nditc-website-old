@@ -2,3 +2,100 @@
 #app {
 	margin-top: 6.7vw;  /make this shit dynamic
 }
+
+#loginl, #logoutl {
+    background-color: rgb(22,22,22);
+    border: none;
+    color: #49ff68;
+    margin: 0.2em;
+	cursor: pointer;
+	transition: color .2s;
+}
+#logoutl:hover, #loginl:hover{
+	color: white;
+}
+
+/* The login pages */
+#glassfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.3);
+    filter: blur(30px);
+}
+#loginbox {
+    background-color: white;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+	height: 60vh;
+	justify-content: center;
+    transform: translate(-50%, -50%);
+    width:50%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.5);
+	border-radius: .5em;
+}
+#loginclose {
+    background: url(/icons/cross.svg) no-repeat;
+    background-color: white;
+    background-position: 50% 50%;
+    width: 4em;
+    height: 4em;
+    /border-radius: 100%;
+    border-style: none;
+	border-top-right-radius: .5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+	cursor: pointer;
+	transition: background .2s;
+}
+#loginclose:hover{
+	background-color: rgba(0,0,0,.1);
+	/box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.5);
+}
+#loginbox img{
+	width: 30%;
+}
+.login-container{
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+}
+.login-item {
+    border: 1px solid #222222;
+    margin: 0.5em;
+    border-radius: .2em;
+    padding: 10px 0.5%;
+    width: 98%;
+}
+.login-button:hover{
+    opacity:0.8;
+}
+.login-button {
+	align-self: center;
+	width: 50%;
+    font-family: code_bold;
+    background-color: #2F5977;
+    color: white;
+    border: none;
+	margin: .5%;
+    cursor: pointer;
+    transition: .2s;
+}
+p{
+    font-family: rock_bold;
+}
+input#login-submit{
+    font-size: 2em;
+    font-family: rock_bold;
+}
