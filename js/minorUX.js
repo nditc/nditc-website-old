@@ -130,29 +130,8 @@ document.addEventListener('input', function (evt) {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//// card anims
-let cards = document.getElementsByClassName('techie');
+/* card anims */
+var cards = document.getElementsByClassName('techie'); // global cards
 for(let i=0; i<cards.length; i++){
 	cards[i].addEventListener('click', function(e){
 		
