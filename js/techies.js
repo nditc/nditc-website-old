@@ -4,11 +4,20 @@ function classListOf(className){
 
 firestore.collection('techies').get()
     .then((all_techies) => {
+        let currendUid = null;
+        if(firebase.auth().currentUser) {
+            currendUid = firebase.auth().currentUser.uid;
+        }
         let template = document.querySelector('.techie.template').outerHTML;
         let output = '';
         all_techies.forEach((techie) => {
             let data = techie.data();
-            data['uid'] = techie.id;
+            data.uid = techie.id;
+            if (currendUid && data.uid === currendUid) {
+                data.loggedin = true;
+            } else {
+                data.loggedin = false;
+            }
             output += Mustache.render(template, data);
         })
         document.querySelector('.techies-container').innerHTML = output;
@@ -37,5 +46,13 @@ firestore.collection('techies').get()
                     });
 			})
 		}
-
+        
+        let editBtn = document.querySelector('.techieedit');
+        if (editBtn) {
+            editBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                console.log('edit mode!');
+            })
+        }
 	})
+    

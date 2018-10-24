@@ -355,3 +355,17 @@ body{
 	background: #999999;
 	transform: rotate(270deg);
 }
+
+.techieedit {
+    background: url(/icons/edit.svg) no-repeat;
+    background-color: white;
+    background-position: 50% 50%;
+    width: 2.5em;
+    height: 2.5em;
+    border-style: none;
+	border-top-right-radius: .5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+	cursor: pointer;
+}
