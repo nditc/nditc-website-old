@@ -9,9 +9,21 @@ body{
 }
 
 .container_title{
+	position: relative;
 	font-size: 3em;
 	font-family: CODE_BOLD;
 	align-self: center;
+	display: flex;
+	justify-content: center;
+}
+
+.container_title:after{
+	content: '';
+	background: black;
+	height: .1em;
+	width: 30%;
+	top: 130%;
+	position: absolute;
 }
 
 .event{
