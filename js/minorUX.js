@@ -1,12 +1,15 @@
 function showHide(vis) {
+	if(vis=='signUp'){
+		document.getElementsByClassName('addStuff')[0].classList.remove('hidden').add('shown');
+	}
     //document.getElementById(vis).style.display = "block";
     //document.getElementById(hid).style.display = "none";
-    var divs = document.getElementsByClassName("pageDiv");
-    for (i = 0; i < divs.length; i++) {
-        div = divs[i]
-        if (div.classList.contains(vis)) div.style.display = "block";
-        else div.style.display = "none";
-    }
+//    var divs = document.getElementsByClassName("pageDiv");
+//    for (i = 0; i < divs.length; i++) {
+//        div = divs[i]
+//        if (div.classList.contains(vis)) div.style.display = "block";
+//        else div.style.display = "none";
+//    }
 }
 
 function throwPassError() {

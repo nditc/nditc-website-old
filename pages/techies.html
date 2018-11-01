@@ -1,5 +1,6 @@
 <div class="mother-container">
 	<div id="loading"></div>
+	<button style="width: 10em; height: 3em; margin: 1em" onclick="showHide('SignUp')">SignUp</button>
 	<div class="title-container">
 		<h1 class="title">TECHIES<span id="blinker"></span></h1>
 	</div>
@@ -48,33 +49,40 @@
             </div>
 		</div>
 	</div>
-
+	
 </div>    
     
-<div>
+<div class="sign_up_mother_container shown">
+<!--
 	<div class="select">
         <button onclick="showHide('addStuff')">Register</button>
         <button onclick="showHide('getStuff')">Your Profile</button>
         <button onclick="showHide('updateStuff')">Update Your Profile</button><br><br>
     </div>
+-->
 
-    <div class="addStuff pageDiv" id="reg">
+    <div class="addStuff pageDiv popup" id="reg">
+        <h1> Register yourself as a techie </h1>
         <div class="addBasic">
-            Name: <input type="text" id="name" placeholder="e.g: Anik Hasan"><br><br>
-            Roll: <input type="number" id="roll" placeholder="e.g: 11903RRR"><br><br>
-            Description: <br> <textarea id="desc" placeholder="a little bit about you"></textarea><br><br>
-            Photo: <input type="file" id="addPhoto"><br><br><br>
+            <input type="text" id="name" placeholder="Full Name"><br><br>
+            <input type="number" id="roll" placeholder="College roll"><br><br>
+            <textarea id="desc" placeholder="a little bit about youself"></textarea><br><br>
         </div>
         <div class="addPass">
-            Password: <input type="password" id="pass" class="passfield" disabled><br><br>
-            Confirm Password: <input type="password" id="confPass" class="passfield" disabled><br><br>
+            <input type="password" id="pass" class="passfield" placeholder="Password"><br><br>
+            <input type="password" id="confPass" class="passfield" placeholder="Confirm password"><br>
+        </div>
+        <div class="dp_uploader">
+        	<img src="../img/techie.jpg">
+        	<input type="file" id="addPhoto"><br>
         </div>
         <span id="passError"></span><br><br>
         <button id="click" onclick="orgData()" disabled>Enter</button>
         <span id="registered" style="color:green"></span>
     </div>
 
-    <div class="getStuff pageDiv" id="prof">
+<!--
+    <div class="getStuff pageDiv shown popup" id="prof">
         Enter a Roll here: <input type="number" id="query"><br><br>
         <button id="getClick" onclick="orgetData()">Enter</button><br>
         <p>
@@ -85,8 +93,10 @@
             Projects: <span id="queryProjects"></span><br>
         </p>
     </div>
+-->
 
-    <div class="updateStuff pageDiv" id="update">
+<!--
+    <div class="updateStuff pageDiv shown popup" id="update">
         Roll: <input type="number" id="updQuery"><br><br>
         Password: <input type="password" id="updPass"><br><br>
         <button id="updEnter" onclick="showForm()" disabled>Enter</button><br><br>
@@ -95,7 +105,7 @@
 
 
     <div class="modal" id="modalMain">
-        <div class="modal-content" id="updateForm"><!-- Using lots of id. Inefficient. HTML pari na :'( -->
+        <div class="modal-content" id="updateForm"> Using lots of id. Inefficient. HTML pari na :'( 
             <img src="" id="formPhoto"><br><br>
             Change Photo: <input type="file" id="updatePhoto"><br><br>
             Name: <input type="text" id="formName"><br><br>
@@ -121,4 +131,5 @@
             <span id="done" style="color:green"></span>
         </div>
     </div>
+-->
 </div>
