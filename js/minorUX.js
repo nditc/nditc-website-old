@@ -1,6 +1,13 @@
+document.querySelector('.popup .cross').addEventListener('click', function(){
+	document.querySelector('.sign_up_mother_container').classList.add('hidden');
+})
+
 function showHide(vis) {
-	if(vis=='signUp'){
-		document.getElementsByClassName('addStuff')[0].classList.remove('hidden').add('shown');
+	console.log('gg');
+	if(vis=='SignUp'){
+		console.log("gg");
+		document.getElementsByClassName('sign_up_mother_container')[0].classList.remove('hidden');
+		document.getElementsByClassName('sign_up_mother_container')[0].classList.add('shown');
 	}
     //document.getElementById(vis).style.display = "block";
     //document.getElementById(hid).style.display = "none";
