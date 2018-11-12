@@ -1,6 +1,6 @@
-document.querySelector('.popup .cross').addEventListener('click', function(){
+/*document.querySelector('.popup .cross').addEventListener('click', function(){
 	document.querySelector('.sign_up_mother_container').classList.add('hidden');
-})
+})*/
 
 function showHide(vis) {
 	console.log('gg');
@@ -18,6 +18,11 @@ function showHide(vis) {
 //        else div.style.display = "none";
 //    }
 }
+
+//--------------------------------------------------------
+//Start of 'Handling data with firebase'
+//someone should rewrite this from scratch
+//even commenting seems tedious
 
 function throwPassError() {
     var passErr = document.getElementById("passError");
@@ -140,6 +145,9 @@ document.addEventListener('input', function (evt) {
     }
 });
 
+//End of 'Handling data with firebase'
+//-------------------------------------
+
 /* card anims */
 var cards = document.getElementsByClassName('techie'); // global cards
 for(let i=0; i<cards.length; i++){
@@ -190,3 +198,4 @@ window.addEventListener('click', function(e){
 		return;	
 	}
 })
+
