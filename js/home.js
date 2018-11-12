@@ -17,6 +17,19 @@ document.getElementById('loginclose').addEventListener('click', () => {
     glassfield.style.display = 'none';
 });
 
+document.querySelector('.popup .cross').addEventListener('click', function(){
+	document.querySelector('.sign_up_mother_container').classList.add('hidden');
+    document.querySelector('.sign_up_mother_container').classList.remove('shown');
+})
+
+function showHide(vis) {
+	if(vis=='SignUp'){
+		console.log("gg");
+		document.getElementsByClassName('sign_up_mother_container')[0].classList.remove('hidden');
+		document.getElementsByClassName('sign_up_mother_container')[0].classList.add('shown');
+	}
+}
+
 document.querySelectorAll('.navbar li').forEach((elem) => {
     elem.addEventListener('click', () => {
         document.querySelectorAll('.navbar li').forEach((elem) => {

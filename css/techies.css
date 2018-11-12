@@ -322,13 +322,6 @@ body{
 	cursor: pointer;
 }
 
-.hidden{
-    display: none !important;
-}
-.shown{
-	display: flex;
-}
-
 #passError{
     color: red;
 }
@@ -369,91 +362,6 @@ input::-webkit-inner-spin-button {
     margin-left: 5%;
 }
 
-.sign_up_mother_container{
-	top: 0;
-	z-index: 10;
-	position: fixed;
-	height: 100vh;
-	flex-direction: row;
-	justify-content: center;
-	width: 100vw;
-	background: rgba(0,0,0,.15);
-}
-
-.popup{
-	padding: 1em 3em;
-	padding-bottom: 3em;
-	position: fixed;
-	top: 50vh;
-	transform: translateY(-50%);
-	background: #FEFEFE;
-	border: 2px solid #222222;
-	width: 60%;
-	align-self: center;
-}
-
-.popup .cross{
-	position: absolute;
-	right: 0;
-	top: 0;
-	padding: 1em;
-}
-
-.popup .cross:hover{
-	cursor: pointer;
-	transition: .4s;
-	background: rgba(0,0,0,.2);
-}
-
-.popup h1{
-	padding-bottom: .5em;
-	font-family: quicksand;
-}
-
-.popup input{
-	font-family: quicksand_medium;
-	border: 1px solid #222222;
-	box-shadow: none;
-	border-radius: .2em;
-	padding: .8em .5em;
-	width: 30em;
-}
-
-.popup textarea{
-	font-family: quicksand_medium;
-	border: 1px solid #222222;
-	box-shadow: none;
-	border-radius: .2em;
-	padding: .8em .5em;
-	height: 5em;
-	width: 30em;
-}
-
-.popup .dp_uploader{
-	overflow: hidden;
-	width: 40%;
-	position: absolute;
-	right: 1em;
-	top: 50%;
-	transform: translateY(-50%);
-	/border: 1px solid black;
-	display: flex;
-	flex-direction: column;
-}
-
-.dp_uploader input#addPhoto{
-	margin-top: 2em;
-	width: 23em;
-	align-self: center;
-}
-
-.dp_uploader img{
-	align-self: center;
-	border-radius: 50%;
-	width: 70%;
-}
-
-
 button#click{
 	cursor: pointer;
 	height: 2.5em;
@@ -465,4 +373,3 @@ button#click{
 	font-size: 1em;
 	font-family: quicksand;
 }
-
