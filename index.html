@@ -60,6 +60,7 @@
                 </li>
                 <li id="loginl">LOG IN</li>
                 <li id="logoutl">LOG OUT</li>
+                <li id="register1">REGISTER</li>
             </ul>
         </div>
     </div>
@@ -78,30 +79,32 @@
     	</div>
         <p id="pass-error"></p>
     </div>
-    
-    <div class="sign_up_mother_container hidden">
-        <div class="addStuff pageDiv popup" id="reg">
-            <div class="cross"><img src="../icons/cross.svg"></div>
-            <h1> Register yourself as a techie </h1>
-            <div class="addBasic">
-                <input type="text" id="name" placeholder="Full Name"><br><br>
-                <input type="number" id="roll" placeholder="College roll"><br><br>
-                <textarea id="desc" placeholder="a little bit about youself"></textarea><br><br>
+
+    <!-- the register/signup module -->
+    <div id="regbox" class="sign_up_mother_container hidden">
+            <div class="addStuff pageDiv popup" id="reg">
+                <div class="cross"><img src="../icons/cross.svg"></span></div>
+                <h1> Register yourself as a techie </h1>
+                <div class="addBasic">
+                    <input type="text" id="name" placeholder="Full Name"><br><br>
+                    <input type="number" id="roll" placeholder="College roll"><br><br>
+                    <textarea id="desc" placeholder="a little bit about youself"></textarea><br><br>
+                </div>
+                <div class="addPass">
+                    <input type="password" id="pass" class="passfield" placeholder="Password"><br><br>
+                    <input type="password" id="confPass" class="passfield" placeholder="Confirm password"><br>
+                </div>
+                <div class="dp_uploader">
+                    <img src="/img/techie.jpg">
+                    <input type="file" id="addPhoto"><br>
+                </div>
+                <span id="passError"></span><br><br>
+                <button id="click">Enter</button>
+                <span id="registered" style="color:green"></span>
             </div>
-            <div class="addPass">
-                <input type="password" id="pass" class="passfield" placeholder="Password"><br><br>
-                <input type="password" id="confPass" class="passfield" placeholder="Confirm password"><br>
-            </div>
-            <div class="dp_uploader">
-            	<img src="../img/techie.jpg">
-            	<input type="file" id="addPhoto"><br>
-            </div>
-            <span id="passError"></span><br><br>
-            <button id="click" onclick="orgData()" disabled>Enter</button>
-            <span id="registered" style="color:green"></span>
         </div>
-    </div>
-    
+
     <script src='js/home.js' type='text/javascript'></script>
+
 </body>
 </html>

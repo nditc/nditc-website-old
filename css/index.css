@@ -3,7 +3,7 @@
 	margin-top: 6.7vw;  /make this shit dynamic
 }
 
-#loginl, #logoutl {
+#loginl, #logoutl, #register1 {
     background-color: rgb(22,22,22);
     border: none;
     color: #49ff68;
@@ -107,7 +107,6 @@ input#login-submit{
 	display: flex;
 }
 
-/* The registration form */
 .sign_up_mother_container{
 	top: 0;
 	z-index: 10;

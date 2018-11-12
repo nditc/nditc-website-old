@@ -14,7 +14,6 @@ const routes = {
         'styles': ['css/techies.css'],
         'scripts': [
             'js/techies.js',
-            'js/minorUX.js',
             'js/mustache.min.js']
     },
     'about': {
