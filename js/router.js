@@ -79,7 +79,9 @@ function applyStyleAndScripts(pageName){
 
 function getPage() {
     const app = document.getElementById('app');
-    let pageName = window.location.hash.substring(2);   //store the target page name in var route
+    // . / / important / / . //
+    // temporarily changed this because the link in the poster is incorrent 
+    let pageName = window.location.hash.substring(1);   //store the target page name in var route
     let uri = routes[pageName]['page']					//fetch the taget page uri from the 'routes' dicrtionary
 	
     
