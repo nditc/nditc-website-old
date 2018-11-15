@@ -1,21 +1,23 @@
+document.querySelector('.popup .cross').addEventListener('click', function(){
+	document.querySelector('.sign_up_mother_container').classList.add('hidden');
+})
+
 function showHide(vis) {
+	console.log('gg');
+	if(vis=='SignUp'){
+		console.log("gg");
+		document.getElementsByClassName('sign_up_mother_container')[0].classList.remove('hidden');
+		document.getElementsByClassName('sign_up_mother_container')[0].classList.add('shown');
+	}
     //document.getElementById(vis).style.display = "block";
     //document.getElementById(hid).style.display = "none";
-    var divs = document.getElementsByClassName("pageDiv");
-    for (i = 0; i < divs.length; i++) {
-        div = divs[i]
-        if (div.classList.contains(vis)) div.style.display = "block";
-        else div.style.display = "none";
-    }
+//    var divs = document.getElementsByClassName("pageDiv");
+//    for (i = 0; i < divs.length; i++) {
+//        div = divs[i]
+//        if (div.classList.contains(vis)) div.style.display = "block";
+//        else div.style.display = "none";
+//    }
 }
-
-/*function showReg() {
-    swapToggle("reg", "prof");
-}
-
-function showProf() {
-    swapToggle("prof", "reg");
-}*/
 
 function throwPassError() {
     var passErr = document.getElementById("passError");
@@ -137,3 +139,54 @@ document.addEventListener('input', function (evt) {
         updateMatch();
     }
 });
+
+/* card anims */
+var cards = document.getElementsByClassName('techie'); // global cards
+for(let i=0; i<cards.length; i++){
+	cards[i].addEventListener('click', function(e){
+		
+		let card = (function(){
+			let path = e.composedPath();
+			for(let i=0; i<path.length; i++){
+				if(path[i].classList.contains('techie')){
+				   return path[i];
+				}
+			}
+			console.log("couldn't find techie in event propagation path");
+		})();
+		
+		let bio_container = card.querySelector('.bio-container');
+		let dp_container = card.querySelector('.dp');
+		
+		card.classList.add('onFocus');
+		dp_container.classList.add('hidden');
+		bio_container.classList.add('focused');
+	})
+}
+
+window.addEventListener('click', function(e){
+	const path = e.composedPath();
+	let found = false;
+	for(let i=0; i<path.length; i++){
+		if(path[i].classList){
+			if(path[i].classList.contains('techie') && path[i].classList.contains('onFocus')){
+				found = true;
+				return;
+			}	
+		}
+	}
+	
+	if(!found){
+		let cards =	document.getElementsByClassName('onFocus');
+		while(cards.length > 0){
+			let card = cards[0];
+			let bio_container = card.querySelector('.bio-container');
+			let dp_container = card.querySelector('.dp');
+
+			card.classList.remove('onFocus');
+			dp_container.classList.remove('hidden');
+			bio_container.classList.remove('focused');	
+		}
+		return;	
+	}
+})

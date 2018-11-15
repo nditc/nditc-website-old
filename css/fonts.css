@@ -3,7 +3,7 @@
 	src: url(../fonts/CODE%20Bold.otf);
 }
 @font-face{
-	font-family: CODE_light;
+	font-family: CODE_regular;
 	src: url(../fonts/CODE%20light.otf);
 }
 @font-face{
@@ -29,4 +29,16 @@
 @font-face{
 	font-family: Dosis_ExtraBold;
 	src: url("../fonts/dosis_family/Dosis-ExtraBold.otf")
+}
+@font-face{
+	font-family: quicksand_regular;
+	src: url("../fonts/Quicksand/Quicksand-Regular.ttf")
+}
+@font-face{
+	font-family: quicksand_bold;
+	src: url("../fonts/Quicksand/Quicksand-Bold.ttf")
+}
+@font-face{
+	font-family: quicksand_medium;
+	src: url("../fonts/Quicksand/Quicksand-Medium.ttf")
 }
