@@ -56,7 +56,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	width: 22em;
-	height: 24em;
+	/height: 24em;
 	border: .1em solid black;
 	border-radius: .4em;
 	transition: tex-stroke-width 1s;
