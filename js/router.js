@@ -25,7 +25,7 @@ const routes = {
 	'init': {
         'page': 'pages/init.html',
         'styles': ['css/init.css'],
-        'scripts': ['js/init.js']
+        'scripts': [] // no scripts yet calling this :/
     },
 	'profile': {
         'page': 'pages/profile.html',
@@ -38,7 +38,8 @@ const routes = {
 
 let lastPageName = "placeholder";			//this is a global
 function applyStyleAndScripts(pageName){
-	let head = document.getElementsByTagName("head")[0];
+	console.log(lastPageName, pageName);
+    let head = document.getElementsByTagName("head")[0];
 	
 	//loads every stylesheet of the specified page using the links stored in the second index of the routes dictionary
 	routes[pageName]['styles'].forEach(function(route){
@@ -79,11 +80,20 @@ function applyStyleAndScripts(pageName){
 
 function getPage() {
     const app = document.getElementById('app');
-    // . / / important / / . //
-    // temporarily changed this because the link in the poster is incorrent 
+
+    // I hate people :)
     let pageName = window.location.hash.substring(1);   //store the target page name in var route
+    if (pageName[0] !== '/') {
+        // TODO //
+        // temporarily changed this because the link in the poster is incorrent 
+        window.location.hash = '#/' + pageName; //proccing a new `getPage`
+        return;
+    }
+    // people doesn't want to abide by the standards *sigh*
+
+    pageName = window.location.hash.substring(2);
+
     let uri = routes[pageName]['page']					//fetch the taget page uri from the 'routes' dicrtionary
-	
     
     fetch(uri)
         .then(function(response) {
